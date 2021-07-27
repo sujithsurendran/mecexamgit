@@ -1,0 +1,17 @@
+Ms,
+
+These are the available rooms. 
+So the available seating capacity is 19 x 18 = 342
+
+201,209,210,211
+301,309,310,311,312,314,315
+401,409,410
+501,509,510,515,511
+
+Please let me know if we cannot use any of these rooms.
+
+rgds
+Sujith S
+
+
+
