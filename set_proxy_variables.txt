@@ -1,0 +1,4 @@
+export HTTP_PROXY="http://mec:mec@192.168.0.2:3128"
+export HTTPS_PROXY="http://mec:mec@192.168.0.2:3128"
+export FTP_PROXY="http://mec:mec@192.168.0.2:3128"
+
