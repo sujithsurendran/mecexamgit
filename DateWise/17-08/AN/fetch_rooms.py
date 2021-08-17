@@ -81,9 +81,9 @@ with open("./output.csv","w") as file1, open(source_file + '.csv') as file2:
 	
 	csvReader = csv.DictReader(file2)
 
-	writer = csv.DictWriter(file1, fieldnames = ["No","Room","Seat","Student","RegNo","Slot","Paper"])
+	writer = csv.DictWriter(file1, fieldnames = ["Room","Seat","Student","RegNo","Slot","Paper"])
 	writer.writeheader()
-	room_index=0
+	
 	for room,capacity in zip(rooms,capacities):
 		
 		#writer.writerow({
@@ -95,7 +95,6 @@ with open("./output.csv","w") as file1, open(source_file + '.csv') as file2:
 		#'Paper':"",
 		#})					
 		i=1
-		room_index=room_index+1
 		pdf.add_page()
 		pdf.set_font('Times', '', 20)
 		pdf.cell(0, 10, 'Seating Arrangement - ' + source_file, 0,1,'R')
@@ -110,7 +109,6 @@ with open("./output.csv","w") as file1, open(source_file + '.csv') as file2:
 		pdf.cell(30, 10, "Paper" , 1,1)
 		
 		pdf.set_font('Times', '', 16)
-		
 		for i,row in zip(range(1,capacity+1),csvReader):
 			
 	
@@ -128,7 +126,6 @@ with open("./output.csv","w") as file1, open(source_file + '.csv') as file2:
 
 
 			writer.writerow({
-			'No':room_index,
 			'Room':room,
 			'Seat':"A" + str(i).zfill(2),
 			'Student':studentName,
