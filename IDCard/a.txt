@@ -1,0 +1,5 @@
+sdhsjdfhg682032 dksjdfhk 
+sdhsjdfhg692032 dksjdfhk 
+sdhsjdfhg234692032 dksjdfhk 
+
+sed -E  "s/(.*[^0-9])([0-9][0-9][0-9][0-9][0-9][0-9] )([^0-9].*)/\1\3\2/g" a.txt
